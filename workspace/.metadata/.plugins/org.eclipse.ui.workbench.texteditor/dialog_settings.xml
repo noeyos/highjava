@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="RCHorse"/>
+		<item key="casesensitive" value="true"/>
+		<item key="wholeword" value="true"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="Horse"/>
+			<item value="20"/>
+			<item value="roomMap"/>
+			<item value="roomNo"/>
+			<item value="int"/>
+		</list>
+		<list key="replacehistory">
+			<item value="RCHorse"/>
+			<item value="10"/>
+			<item value="map"/>
+			<item value="roomNum"/>
+			<item value="String"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="267"/>
+		<item key="DIALOG_Y_ORIGIN" value="391"/>
+	</section>
+</section>

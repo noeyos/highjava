@@ -1,0 +1,30 @@
+package kr.or.ddit.basic;
+
+// 은행의 입출금을 스레드로 처리하는 예제
+
+public class ThreadTest16 {	// 이 클래스의 객체가 공통으로 사용할 객체가 된다.
+	
+	private int balance;	// 잔액이 저장될 변수
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	
+	// 입금을 처리하는 메서드
+	public void deposit(int money) {
+		balance += money;
+	}
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+

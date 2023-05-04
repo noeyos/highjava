@@ -1,0 +1,20 @@
+package kr.or.ddit.basic;
+
+/*
+
+	Vector, Hashtable등 예전부터 존재하던 Collection객체들은 내부에 동기화 처리가 되어 있다.
+	
+	그런데, 새로 구성된 Collection들은 동기화 처리가 되어 있지 않다.
+	그래서 동기화가 필요한 프로그램에서 최근의 Collection들을 사용하려면 동기화 처리를 한 후에 사용해야 한다.
+*/
+
+
+
+public class ThreadTest17 {
+	private static Vector<Integer> vec = new Vector<>();
+
+	public static void main(String[] args) {
+
+	}
+
+}

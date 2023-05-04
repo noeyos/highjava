@@ -1,0 +1,8 @@
+package kr.or.ddit.basic;
+
+// 경마 프로그램
+public class ThreadTest13 {
+	public static void main(String[] args) {
+		
+	}
+}

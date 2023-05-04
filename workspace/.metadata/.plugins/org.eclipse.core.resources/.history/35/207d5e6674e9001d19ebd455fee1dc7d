@@ -1,0 +1,20 @@
+package kr.or.ddit.basic;
+
+/*
+
+	'e:/e_other' 폴더에 있는 '펭귄.jpg'파일을
+	'e:/e_other/연습용' 폴더에 '펭귄_복사본.jpg'파일로 복사하는 프로극램
+
+
+*/
+
+
+
+public class FileCopy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

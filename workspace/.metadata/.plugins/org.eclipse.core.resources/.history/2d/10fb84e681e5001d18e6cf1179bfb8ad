@@ -1,0 +1,32 @@
+package kr.or.ddit.basic;
+
+
+// yield()메서드 예제
+
+public class ThreadTest10 {
+	public static void main(String[] args) {
+		
+	}
+}
+
+
+// yield()메서드 연습용 스레드
+class YieldThread extends Thread {
+	private boolean stop = false;
+	private boolean work = true;
+	
+	public YieldThread(String name) {
+		super(name);	// 스레드의 이름을 설정
+	}
+	
+	@Override
+	public void run() {
+		while(!stop) {
+			if(work) {
+				System.out.println(getName() + " 스레드 작업 중.");
+			} else {
+				
+			}
+		}
+	}
+}

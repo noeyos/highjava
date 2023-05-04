@@ -1,0 +1,16 @@
+package kr.or.ddit.basic;
+
+/*
+	wait(), notify() 메서드를 이용해서
+	두 스레드가 번갈아 한번씩 실행되는 예제
+*/
+
+
+public class ThreadTest18 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

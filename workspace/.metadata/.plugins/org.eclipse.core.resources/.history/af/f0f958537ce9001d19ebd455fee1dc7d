@@ -1,0 +1,20 @@
+package kr.or.ddit.basic;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class DataIOTest {
+
+	public static void main(String[] args) {
+		try {
+			
+			// 파일 출력용 스트림 객체 생성
+			FileOutputStream fout = new FileOutputStream("e:/e_other/test.dat");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}
