@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.ShareObject"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.TestThread"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadTest16"/>
-    <fullyQualifiedTypeName name="java.lang.InternalError"/>
-    <fullyQualifiedTypeName name="java.lang.Runnable"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.GameStatePrint"/>
-    <fullyQualifiedTypeName name="java.util.Vector"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.WorkObject"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadA"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.DataBox"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.DataInThread"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.DataOutThread"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
     <fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
@@ -43,11 +26,9 @@
     <fullyQualifiedTypeName name="java.io.InputStream"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.nio.file.attribute.AclEntry"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.Receiver"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.Destination"/>
     <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.lang.Byte"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.net.ServerSocket"/>
@@ -55,9 +36,28 @@
     <fullyQualifiedTypeName name="java.io.DataInputStream"/>
     <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
     <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="javax.swing.filechooser.FileNameExtensionFilter"/>
     <fullyQualifiedTypeName name="java.awt.Panel"/>
     <fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
+    <fullyQualifiedTypeName name="org.apache.poi.hssf.util.HSSFColor.HSSFColorPredefined"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Row"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.TextTable.Cell"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Cell"/>
     <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="poi.ApachePOIExcel"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="org.apache.poi.hssf.usermodel.HSSFWorkbook"/>
+    <fullyQualifiedTypeName name="org.apache.poi.hssf.usermodel.HSSFSheet"/>
+    <fullyQualifiedTypeName name="org.apache.poi.hssf.usermodel.HSSFRow"/>
+    <fullyQualifiedTypeName name="org.apache.poi.hssf.usermodel.HSSFCell"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFCell"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFWorkbook"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFSheet"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFRow"/>
+    <fullyQualifiedTypeName name="org.apache.poi.EncryptedDocumentException"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="org.apache.xmlbeans.impl.xb.xsdschema.ListDocument.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
