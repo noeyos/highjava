@@ -3,7 +3,7 @@ package poi;
 import java.util.Date;
  
 public class StudentDTO {
-    Integer id;    // 번호
+    Integer id;    // 번호ha
     String name; // 이름
     Date birthDate;    // 생년월일
     
