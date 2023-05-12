@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.EOFException"/>
-    <fullyQualifiedTypeName name="java.io.ObjectOutput"/>
-    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
-    <fullyQualifiedTypeName name="java.net.URL"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="org.w3c.dom.ls.LSOutput"/>
     <fullyQualifiedTypeName name="java.io.OutputStream"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
@@ -51,7 +43,6 @@
     <fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.TcpMultiChatClient.ClientSender"/>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.TcpMultiChatClient.ClientReceiver"/>
     <fullyQualifiedTypeName name="java.net.InetAddress"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.net.DatagramSocket"/>
     <fullyQualifiedTypeName name="java.net.DatagramPacket"/>
     <fullyQualifiedTypeName name="org.apache.poi.sl.usermodel.Sheet"/>
@@ -60,4 +51,13 @@
     <fullyQualifiedTypeName name="org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.TextTable.Cell"/>
     <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Cell"/>
     <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.CellType"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.basic.JdbcTest06"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>
