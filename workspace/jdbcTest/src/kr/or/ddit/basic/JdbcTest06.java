@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 import kr.or.ddit.util.DBUtil;
+import kr.or.ddit.util.DBUtil2;
+import kr.or.ddit.util.DBUtil3;
 
 /*
 	회원을 관리하는 프로그램을 작성하시오... (MYMEMBER테이블 이용)
@@ -35,7 +37,10 @@ public class JdbcTest06 {
 
 	static Scanner scan = new Scanner(System.in);
 
-	static Connection conn = DBUtil.getConnection();;
+	static Connection conn = 
+//			DBUtil.getConnection();
+//			DBUtil2.getConnection();
+			DBUtil3.getConnection();
 	static Statement stmt = null;
 	static PreparedStatement pstmt = null;
 	static ResultSet rs = null;
