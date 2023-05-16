@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.swing.filechooser.FileNameExtensionFilter"/>
-    <fullyQualifiedTypeName name="java.awt.Panel"/>
-    <fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
-    <fullyQualifiedTypeName name="org.apache.poi.hssf.util.HSSFColor.HSSFColorPredefined"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="poi.ApachePOIExcel"/>
     <fullyQualifiedTypeName name="org.apache.poi.hssf.usermodel.HSSFWorkbook"/>
@@ -17,9 +13,7 @@
     <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFRow"/>
     <fullyQualifiedTypeName name="org.apache.poi.EncryptedDocumentException"/>
     <fullyQualifiedTypeName name="org.apache.xmlbeans.impl.xb.xsdschema.ListDocument.List"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.net.ServerSocket"/>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.TcpMultiChatServer.ServerReceiver"/>
@@ -53,11 +47,17 @@
     <fullyQualifiedTypeName name="kr.or.ddit.basic.ResourceBundleTest"/>
     <fullyQualifiedTypeName name="java.util.ResourceBundle"/>
     <fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil2"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.mvc.vo.MemberVO"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="kr.or.ddit.mvc.dao.IMemberDao"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.mvc.vo.MemberVO"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil3"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil3"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.basic.singleton.MySingleton"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.mvc.service.MemberSerivceImpl"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.mvc.dao.MemberDaoImpl"/>
 </qualifiedTypeNameHistroy>
