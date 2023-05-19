@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="jdbcTest06Answer"/>
+		<item key="selection" value="select"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="select"/>
 			<item value="JDBCTest00"/>
 			<item value="delete"/>
 			<item value="수정"/>
@@ -13,7 +14,6 @@
 			<item value="Horse"/>
 			<item value="20"/>
 			<item value="roomMap"/>
-			<item value="roomNo"/>
 		</list>
 		<list key="replacehistory">
 			<item value="jdbcTest06Answer"/>
