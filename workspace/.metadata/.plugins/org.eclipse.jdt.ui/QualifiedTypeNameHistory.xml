@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.TcpMultiChatClient"/>
-    <fullyQualifiedTypeName name="java.net.Socket"/>
-    <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.DataInputStream"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.TcpMultiChatClient.ClientSender"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.TcpMultiChatClient.ClientReceiver"/>
-    <fullyQualifiedTypeName name="java.net.InetAddress"/>
-    <fullyQualifiedTypeName name="java.net.DatagramSocket"/>
-    <fullyQualifiedTypeName name="java.net.DatagramPacket"/>
-    <fullyQualifiedTypeName name="org.apache.poi.sl.usermodel.Sheet"/>
-    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Sheet"/>
-    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Row"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.TextTable.Cell"/>
     <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Cell"/>
     <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.CellType"/>
@@ -39,7 +27,6 @@
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="kr.or.ddit.board.util.DBUtil3"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="kr.or.ddit.board.dao.IJdbcBoardDao"/>
     <fullyQualifiedTypeName name="kr.or.ddit.board.dao.JdbcBoardDaoImpl"/>
     <fullyQualifiedTypeName name="kr.or.ddit.board.service.IJdbcBoardService"/>
@@ -56,8 +43,21 @@
     <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
     <fullyQualifiedTypeName name="kr.or.ddit.vo.LprodVO"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.util.MyBatisSqlSessionFactory"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="kr.or.ddit.mvc.vo.MemberVO"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.util.MyBatisSqlSessionFactory"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.net.URLEncoder"/>
+    <fullyQualifiedTypeName name="javax.security.auth.callback.NameCallback"/>
+    <fullyQualifiedTypeName name="java.net.URLDecoder"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 </qualifiedTypeNameHistroy>

@@ -7,8 +7,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
+
 import kr.or.ddit.board.util.DBUtil3;
 import kr.or.ddit.board.vo.JdbcBoardVO;
+import kr.or.ddit.util.MyBatisSqlSessionFactory;
 
 public class JdbcBoardDaoImpl implements IJdbcBoardDao {
 	private static JdbcBoardDaoImpl dao;
@@ -22,237 +25,123 @@ public class JdbcBoardDaoImpl implements IJdbcBoardDao {
 
 	@Override
 	public int insertBoard(JdbcBoardVO boardVo) {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
+		SqlSession session = null;
 		int cnt = 0;
 		try {
-			conn = DBUtil3.getConnection();
-			String sql = "insert into jdbc_board "
-					+ "(board_no, board_title, board_writer, "
-					+ "board_date, board_cnt, board_content) "
-					+ "values(board_seq.nextval, ?, ?, sysdate, 0, ?)";
+			session = MyBatisSqlSessionFactory.getSqlSession();
+					
+			cnt = session.insert("board.insertBoard", boardVo);
+			if(cnt>0) session.commit();
 			
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, boardVo.getBoard_title());
-			pstmt.setString(2, boardVo.getBoard_writer());
-			pstmt.setString(3, boardVo.getBoard_content());
-			
-			cnt = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} if(pstmt!=null) try { pstmt.close(); } catch (SQLException e ) {}
-		  if(conn!=null) try { pstmt.close(); } catch (SQLException e ) {}
+		} finally {
+			if(session!=null) session.close();
+		}
 		
 		return cnt;
 	}
 
 	@Override
 	public int deleteBoard(int boardNo) {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
+		SqlSession session = null;
 		int cnt = 0;
 		try {
-			conn = DBUtil3.getConnection();
-			String sql = "delete from jdbc_board where board_no = ?";
+			session = MyBatisSqlSessionFactory.getSqlSession();
+					
+			cnt = session.insert("board.deleteBoard", boardNo);
+			if(cnt>0) session.commit();
 			
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, boardNo);
-			
-			cnt = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} if(pstmt!=null) try { pstmt.close(); } catch (SQLException e ) {}
-		  if(conn!=null) try { pstmt.close(); } catch (SQLException e ) {}
+		} finally {
+			if(session!=null) session.close();
+		}
 		
 		return cnt;
 	}
 
 	@Override
 	public int updateBoard(JdbcBoardVO boardVo) {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
+		SqlSession session = null;
 		int cnt = 0;
 		try {
-			conn = DBUtil3.getConnection();
-			String sql = "update jdbc_board set "
-					+ " board_title = ?,"
-					+ " board_content = ?,"
-					+ " board_date = sysdate"
-					+ " where board_no = ?";
+			session = MyBatisSqlSessionFactory.getSqlSession();
+					
+			cnt = session.insert("board.updateBoard", boardVo);
+			if(cnt>0) session.commit();
 			
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, boardVo.getBoard_title());
-			pstmt.setString(2, boardVo.getBoard_content());
-			pstmt.setInt(3, boardVo.getBoard_no());
-			
-			cnt = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
-		  if(conn!=null) try { pstmt.close(); } catch (SQLException e) {}
+		} finally {
+			if(session!=null) session.close();
+		}
 		
 		return cnt;
 	}
 
 	@Override
 	public JdbcBoardVO getBoard(int boardNo) {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		List<JdbcBoardVO> boardList = null;
+		SqlSession session = null;
 		JdbcBoardVO boardVo = null;
-		
+
 		try {
-			conn = DBUtil3.getConnection();
-			String sql = "select board_no, board_title, board_writer, "
-					+ " board_cnt, to_char(board_date, 'YYYY-MM-DD') board_date,"
-					+ " board_content "
-					+ " from jdbc_board "
-					+ " where board_no =?";
+			session = MyBatisSqlSessionFactory.getSqlSession();
+					
+			boardVo = session.selectOne("board.getBoard", boardNo);
+			// ==> 레코드가 하나밖에 안 나올 땐 selectOne 사용
 			
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, boardNo);
-			
-			rs = pstmt.executeQuery();
-			
-			
-			while(rs.next()) {
-				boardVo = new JdbcBoardVO();
-				boardVo.setBoard_no(rs.getInt("board_no"));
-				boardVo.setBoard_title(rs.getString("board_title"));
-				boardVo.setBoard_writer(rs.getString("board_writer"));
-				boardVo.setBoard_date(rs.getString("board_date"));
-				boardVo.setBoard_cnt(rs.getInt("board_cnt"));
-				boardVo.setBoard_content(rs.getString("board_content"));
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace();
 		} finally {
-			
-		} if(rs!=null) try { rs.close(); } catch (SQLException e) {}
-		  if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
-		  if(conn!=null) try { pstmt.close(); } catch (SQLException e) {}
-		
+			if(session!=null) session.close();
+		}
 		
 		return boardVo;
 	}
 
 	@Override
 	public List<JdbcBoardVO> getAllBoard() {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
+		SqlSession session = null;
 		List<JdbcBoardVO> boardList = null;
 		
 		try {
-			conn = DBUtil3.getConnection();
-			String sql = "select board_no, board_title, board_writer, "
-					+ " board_cnt, to_char(board_date, 'YYYY-MM-DD') board_date,"
-					+ " board_content "
-					+ " from jdbc_board "
-					+ " order by board_no desc";
+			session = MyBatisSqlSessionFactory.getSqlSession();
+					
+			boardList = session.selectList("board.getAllBoard");
+			// ==> List같이 레코드가 여러개일 경우 selectList 사용
 			
-			pstmt = conn.prepareStatement(sql);
-			
-			rs = pstmt.executeQuery();
-			
-			boardList = new ArrayList<>();
-			
-			while(rs.next()) {
-				JdbcBoardVO boardVo = new JdbcBoardVO();
-				boardVo.setBoard_no(rs.getInt("board_no"));
-				boardVo.setBoard_title(rs.getString("board_title"));
-				boardVo.setBoard_writer(rs.getString("board_writer"));
-				boardVo.setBoard_date(rs.getString("board_date"));
-				boardVo.setBoard_cnt(rs.getInt("board_cnt"));
-				boardVo.setBoard_content(rs.getString("board_content"));
-				
-				boardList.add(boardVo);
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace();
 		} finally {
-			
-		} if(rs!=null) try { rs.close(); } catch (SQLException e) {}
-		  if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
-		  if(conn!=null) try { pstmt.close(); } catch (SQLException e) {}
-		
+			if(session!=null) session.close();
+		}
 		
 		return boardList;
 	}
 
 	@Override
 	public List<JdbcBoardVO> getSearchBoard(String title) {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
+		SqlSession session = null;
 		List<JdbcBoardVO> boardList = null;
-		
+
 		try {
-			conn = DBUtil3.getConnection();
-			String sql = "select board_no, board_title, board_writer, "
-					+ " board_cnt, to_char(board_date, 'YYYY-MM-DD') board_date,"
-					+ " board_content "
-					+ " from jdbc_board "
-					+ " where board_title like '%' || ? || '%' "
-					+ " order by board_no desc";
+			session = MyBatisSqlSessionFactory.getSqlSession();
+					
+			boardList = session.selectList("board.getSearchBoard", title);
+			// ==> List같이 레코드가 여러개일 경우 selectList 사용
 			
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, title);
-			
-			rs = pstmt.executeQuery();
-			
-			boardList = new ArrayList<>();
-			
-			while(rs.next()) {
-				JdbcBoardVO boardVo = new JdbcBoardVO();
-				boardVo.setBoard_no(rs.getInt("board_no"));
-				boardVo.setBoard_title(rs.getString("board_title"));
-				boardVo.setBoard_writer(rs.getString("board_writer"));
-				boardVo.setBoard_date(rs.getString("board_date"));
-				boardVo.setBoard_cnt(rs.getInt("board_cnt"));
-				boardVo.setBoard_content(rs.getString("board_content"));
-				
-				boardList.add(boardVo);
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace();
 		} finally {
-			
-		} if(rs!=null) try { rs.close(); } catch (SQLException e) {}
-		  if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
-		  if(conn!=null) try { pstmt.close(); } catch (SQLException e) {}
-		
+			if(session!=null) session.close();
+		}
 		
 		return boardList;
 	}
 
 	@Override
 	public int setCountIncrement(int boardNo) {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
+		SqlSession session = null;
 		int cnt = 0;
+		
 		try {
-			conn = DBUtil3.getConnection();
-			String sql = "update jdbc_board set "
-					+ " board_cnt = board_cnt + 1"
-					+ " where board_no = ?";
+			session = MyBatisSqlSessionFactory.getSqlSession();
+					
+			cnt = session.insert("board.setCountIncrement", boardNo);
+			if(cnt>0) session.commit();
 			
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, boardNo);
-			
-			cnt = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
-		  if(conn!=null) try { pstmt.close(); } catch (SQLException e) {}
+		} finally {
+			if(session!=null) session.close();
+		}
 		
 		return cnt;
 	}

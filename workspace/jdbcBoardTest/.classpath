@@ -9,5 +9,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/학원/highjava/library/mybatis-3.5.7.jar"/>
 	<classpathentry kind="lib" path="D:/학원/highjava/library/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="E:/A_study/highjava/library/mybatis-3.5.7.jar"/>
+	<classpathentry kind="lib" path="E:/A_study/highjava/library/ojdbc6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
