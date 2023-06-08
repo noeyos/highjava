@@ -41,7 +41,6 @@
     <fullyQualifiedTypeName name="com.google.gson.Gson"/>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.json.LprodDaoImpl"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.util.MyBatisSqlSessionFactory"/>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.fileUpload.dao.IFileInfoDao"/>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.fileUpload.dao.FileInfoDaoImpl"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.MultipartConfig"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="java.net.URLEncoder"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.util.MyBatisSqlSessionFactory"/>
 </qualifiedTypeNameHistroy>
