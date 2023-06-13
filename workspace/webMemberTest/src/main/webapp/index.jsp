@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="<%= request.getContextPath() %>/memberList.do">회원 목록 보기</a>
+<a href="<%=request.getContextPath() %>/member/memberList.do">회원 목록 보기</a>
 </body>
 </html>

@@ -1,57 +1,57 @@
 package kr.or.ddit.member.service;
 
 import java.util.List;
+import java.util.Map;
 
 import kr.or.ddit.member.dao.IMemberDao;
 import kr.or.ddit.member.dao.MemberDaoImpl;
-import kr.or.ddit.member.vo.MemberVO;
+import kr.or.ddit.vo.MemberVO;
 
-public class MemberServiceImpl implements IMemberService{
 
-	private static IMemberService service;
-	private IMemberDao dao;
+public class MemberServiceImpl implements IMemberService {
+	// 1번
+	private static MemberServiceImpl service;
 	
-	public MemberServiceImpl() {
-		dao = MemberDaoImpl.getDao();
+	private IMemberDao dao;		
+	
+
+	private MemberServiceImpl() {
+		dao = MemberDaoImpl.getInstance();
 	}
 	
-	public static IMemberService getService() {
-		if(service == null) service = new MemberServiceImpl();
+	public static MemberServiceImpl getInstance() {
+		if(service==null) service = new MemberServiceImpl();
+		
 		return service;
 	}
-	
+
+	@Override
+	public int insertMember(MemberVO vo) {
+		return dao.insertMember(vo);
+	}
+
+	@Override
+	public int deleteMember(String id) {
+		return dao.deleteMember(id);
+	}
+
+	@Override
+	public int updateMember(MemberVO vo) {
+		return dao.updateMember(vo);
+	}
+
 	@Override
 	public List<MemberVO> getAllMember() {
 		return dao.getAllMember();
 	}
 
 	@Override
-	public int insertMember(MemberVO vo) {
-		// TODO Auto-generated method stub
-		return dao.insertMember(vo);
-	}
-
-	@Override
-	public int deleteMember(String id) {
-		// TODO Auto-generated method stub
-		return dao.deleteMember(id);
-	}
-
-	@Override
-	public int updateMember(MemberVO vo) {
-		// TODO Auto-generated method stub
-		return dao.updateMember(vo);
-	}
-
-	@Override
-	public int checkId(String id) {
-		// TODO Auto-generated method stub
-		return dao.checkId(id);
+	public int getMemberCount(String id) {
+		return dao.getMemberCount(id);
 	}
 
 	@Override
 	public MemberVO getMemberDetail(String id) {
-		// TODO Auto-generated method stub
 		return dao.getMemberDetail(id);
 	}
 
